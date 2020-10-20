@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Submit a new Flight!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <a href="/flights/all">See all flights!</a>
+    <h1>Submit a new Flight!</h1>
+    <!--next step for this data is to route it -->
+<form action="/flights/new-flights" method="POST" id="flight-form">  
+  <label>Airline:
+    <select name="airline">
+        <option value="American">American</option>
+        <option value="Southwest">Southwest</option>
+        <option value="United">United</option>
+    </select>
+  </label><br>
+  <label>Airport:
+    <select name="airport">
+        <option value="DEN">DEN</option>
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+    </select>
+  </label><br>
+  <label>flight No:
+        <input type="text" name="flightno">
+  </label><br>
+  <label>Departs:
+    <input type="datetime-local" name="departs">
+  </label>
+  <br>
+  <button type="submit" form="flight-form" value="submit">Submit</button>
+</form>
+
+  </body>
+</html>
